@@ -1,0 +1,36 @@
+/*
+CORES:
+Isabelline: f2efe9
+Prussian Blue: 13293d
+Beaver: 9a8679
+Fundo do input: C4C4C4
+
+FONTES:
+Título, botões, créditos: Playfair Display (Regular 400, Bold 700, Bold 700 Italic)
+Texto: Amiri
+
+font-family: 'Amiri', serif;
+font-family: 'Playfair Display', serif;
+
+*/
+
+/* NÃO ESQUECER!
+Ajustar o z-index da imagem
+Pensar como linkar de volta pra página da NASA
+*/
+
+
+body {
+    margin: 0;
+}
+
+section {
+    height: 100vh;
+    position: fixed;
+}
+
+.info {
+    left: 0;
+    display: grid;
+
+}
