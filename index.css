@@ -19,18 +19,143 @@ Ajustar o z-index da imagem
 Pensar como linkar de volta pra página da NASA
 */
 
-
 body {
-    margin: 0;
+  margin: 0;
+  background: #f5f5f5;
 }
 
 section {
     height: 100vh;
-    position: fixed;
+    box-sizing: border-box;
 }
 
 .info {
-    left: 0;
-    display: grid;
+    box-sizing: border-box;
+    overflow-y: scroll;
+  position: fixed;
+  left: 0;
+  width: 33vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2efe9;
+  padding: 1.5rem;
+  gap: 3px;
+}
 
+.media {
+    position: fixed;
+    right: 0;
+    width: 80vw;
+    z-index: -1;
+}
+
+.pic {
+    position: inherit;
+    width: 100%;
+    right: 0;
+    display: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.logo {
+  height: 6rem;
+  padding: 0;
+}
+
+.title, .subtitle, footer, button {
+    font-family: "Playfair Display", serif;
+}
+
+.identification, .description {
+    display: none;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  color: #13293d;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+.subtitle, .input-title {    
+  color: #9a8679;
+  font-weight: 400;
+}
+
+.subtitle {
+    font-size: 2.1rem;
+}
+
+.input-title {
+    font-size: 2.3rem;
+}
+
+.date-input {
+    background-color: hsla(21, 20%, 63%, .2);
+    width: 80%;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 10px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: #9a8679;
+}
+
+footer {
+    width: 80%;
+    font-size: 0.5rem;
+    padding: 2px;
+    color: #13293d;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #9a8679;
+}
+
+.description {
+  overflow-y: scroll;
+  padding: 7px;
+  font-family: 'Amiri', serif;  
+}
+
+.description::-webkit-scrollbar {
+  width: 8px; /* Mostly for vertical scrollbars */
+  height: 8px; /* Mostly for horizontal scrollbars */
+}
+
+.description::-webkit-scrollbar-thumb {
+  /* Foreground */
+  background: #9a8679;
+}
+
+.info::-webkit-scrollbar {
+    display: none;
+  }
+
+.invisible {
+    display: none;
 }
