@@ -58,6 +58,10 @@ section {
     right: 0;
 }
 
+.pic {
+    height: auto;
+}
+
 .vid {
     height: 100%;
 }
