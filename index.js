@@ -1,19 +1,10 @@
 $(".apodbtn").click(function(date) {
     setApod();
-})
+});
 
-$(".new-date").click(function(default) {
-    turnBack();
-})
-
-function turnBack() {
-    $('.input').removeClass('invisible');
-    $('.new-date').addClass('invisible');
-    $('.description').addClass('invisible');
-    $('.identification').addClass('invisible');
-    $('.copyright').addClass('invisible');
-    $('.pic').addClass('invisible');
-}
+$(".new-date").click(function() {
+    location.reload();
+});
 
 function setApod() {    
     var date = $("#apod-date").val();
