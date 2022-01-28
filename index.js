@@ -1,21 +1,45 @@
-/* SWITCH DO INPUT:
-display: block no title subtitle description
-display: none no input-title e input
-OUUUUU a ideia do edu: insert e remove class .invisible
-muda as cores da nav
-Tentar inserir slideinright na imagem
-
-API Key: j3gAcBzYdK0oGQdLD6Eaj9SF9Dq6NTIplK9ybvZi
-*/
-
 $(".apodbtn").click(function(date) {
-    /* var date1 = $("#apod-date").val().split("-");
-    var date = `${date1[2]}/${date1[1]}/${date1[0]}` */
-    var date = $("#apod-date").val();
-    console.log(date);
-    // setApod();
+    setApod();
 })
 
-/* function setApod() {
-    $.ajax(, success)
-} */
+function setApod() {    
+    var date = $("#apod-date").val();
+    console.log(date);
+    var link = `https://api.nasa.gov/planetary/apod?api_key=j3gAcBzYdK0oGQdLD6Eaj9SF9Dq6NTIplK9ybvZi&date=${date}`;
+
+    $.ajax({url: link,
+        success: function(apod){
+            $('.input').addClass('invisible');
+            $('.new-date').removeClass('invisible');
+            $('.description').removeClass('invisible');
+            $('.description').text(apod.explanation);
+            $('.identification').removeClass('invisible');
+            $('.copyright').text(apod.copyright);
+            $('.copyright').removeClass('invisible');
+            $('.pic').attr('src', apod.url);
+            $('.pic').removeClass('invisible');
+            
+            var oTitulo = apod.title;
+            var oTipo = apod.media_type;
+
+            function getTitle() {
+                if (oTitulo.includes(':') == true && oTipo === "image") {
+                var titleSubtitle = oTitulo.split(': ');
+                $('.title').text(titleSubtitle[0]);
+                $('.subtitle').text(titleSubtitle[1]);
+                $('.subtitle').removeClass('invisible');
+            } else {
+                $('.title').text(oTitulo);
+                $('.subtitle').addClass('invisible');
+            }}
+            getTitle();
+            
+            if (apod.media_type === "video") {
+                $('.vid').attr('src', apod.url);
+                $('.vid').removeClass('invisible');
+            } else if (apod.media_type === "image") {
+                $('.img').attr('src', apod.url);
+                $('.img').removeClass('invisible');
+            }
+        }})
+}

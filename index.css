@@ -52,17 +52,40 @@ section {
     z-index: -1;
 }
 
-.pic {
+.pic, .vid {
     position: inherit;
     width: 100%;
     right: 0;
-    display: none;
+}
+
+.vid {
+    height: 100%;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 0.7rem;
+    background-color: hsla(156, 9%, 90%, 0.75);
+    color: #9a8679;
 }
 
 nav {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 25px;
+  right: 10px;
+  box-sizing: border-box;
+}
+
+.new-date {
+    color: #13293d;
+    background: #f2efe9;
+    padding: 15px;
+    border-radius: 30px;
+    letter-spacing: 0.1em;
+    font-size: 0.7rem;
 }
 
 .logo {
@@ -70,12 +93,8 @@ nav {
   padding: 0;
 }
 
-.title, .subtitle, footer, button {
+.title, .subtitle, footer, button, .new-date {
     font-family: "Playfair Display", serif;
-}
-
-.identification, .description {
-    display: none;
 }
 
 .input {
@@ -121,6 +140,10 @@ button {
     background: transparent;
     border: none;
     color: #9a8679;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 footer {
