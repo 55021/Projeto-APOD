@@ -9,3 +9,9 @@ A Nasa disponibiliza uma série de API's que fornecem acesso aos seus projetos e
 Sua aplicação deve ser capaz de receber uma data como entrada do usuário a partir de um formulário. Com a data selecionada, ao clicar no botão de envio, uma requisição deve ser enviada à API da APOD para que seja obtida a foto ou vídeo referente ao dia escolhido. De posse dessa informação, a página deve ser manipulada para que os dados retornados sejam devidamente exibidos. Sua aplicação deve, obrigatoriamente, ter um repositório no Github, estar disponível em uma Github Page e utilizar jQuery.
 
 #### Layout Desktop
+
+![image](https://github.com/55021/Projeto-APOD/blob/master/initial-page.png?raw=true)
+
+![image](https://github.com/55021/Projeto-APOD/blob/master/image-result.jpeg?raw=true)
+
+![image](https://github.com/55021/Projeto-APOD/blob/master/video-result.png?raw=true)
