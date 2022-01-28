@@ -45,5 +45,8 @@ function setApod() {
                 $('.img').attr('src', apod.url);
                 $('.img').removeClass('invisible');
             }
-        }})
+        }, error: function() {
+            $('.input-title').text("Date not avaliable. Please choose a date after June 20th, 1995.");
+        }
+    })
 }
